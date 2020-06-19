@@ -23,10 +23,9 @@ public class ProductController {
         model.addAttribute("products",productList);
         return "index";
     }
-    @GetMapping("/product/create")
+    @GetMapping("product/create")
     public String create(Model model) {
-        List productList = productService.findAll();
-        model.addAttribute("product",productList);
+        model.addAttribute("product",new Product());
         return "create";
     }
     @PostMapping("/product/save")

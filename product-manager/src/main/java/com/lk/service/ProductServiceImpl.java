@@ -25,21 +25,21 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void save(Product product) {
-
+        products.put(product.getId(),product);
     }
 
     @Override
     public Product findById(int id) {
-        return null;
+        return products.get(id);
     }
 
     @Override
     public void update(int id, Product product) {
-
+        products.put(id,product);
     }
 
     @Override
     public void remove(int id) {
-
+        products.remove(id);
     }
 }
